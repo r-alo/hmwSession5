@@ -28,4 +28,19 @@ $(document).ready(function () {
 
     hourTracker();
 
+    //Save button function to session storage
+    $(".saveBtn").click(function(event) {
+        event.preventDefault();
+
+        const input = $(this).siblings(".tasks").val();
+        const time = $(this).parent().attr("id");
+
+        sessionStorage.setItem(time, input)
+    });
+
+    // Get items from session storage to keep on refresh
+    for (let i = 9; i < 18; i++) {
+        $(`#${i} .tasks`).val(sessionStorage.getItem(`${i}`));
+    };
+
 })
