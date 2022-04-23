@@ -57,3 +57,13 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+aside {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#clearBtn {
+  margin-top: 20px;
+  margin-right: 20px;
+}

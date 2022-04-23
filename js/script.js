@@ -2,7 +2,7 @@
 let todayDate = moment().format('dddd, MMM Do YYYY');
 $("#currentDay").html(todayDate);
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     function hourTracker () {
         //Constant w/ the current hour
@@ -29,7 +29,7 @@ $(document).ready(function () {
     hourTracker();
 
     //Save button function to session storage
-    $(".saveBtn").click(function(event) {
+    $(".saveBtn").click(function (event) {
         event.preventDefault();
 
         const input = $(this).siblings(".tasks").val();
@@ -43,4 +43,10 @@ $(document).ready(function () {
         $(`#${i} .tasks`).val(sessionStorage.getItem(`${i}`));
     };
 
-})
+});
+
+// Clear text area button
+$("#clearBtn").click(function () {
+    sessionStorage.clear();
+    location.reload();
+});

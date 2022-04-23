@@ -2,7 +2,7 @@
 
 A simple daily work scheduler to organize each day efficiently w/ colors to quickly detect the current time
 
-The following animation demonstrates the application functionality:
+The following animation demonstrates the application's functionality:
 
 ### Results:
 * [GitHub Page](https://r-alo.github.io/hmwSession5/)
